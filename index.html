@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies App</title>
-    <link rel="stylesheet" href="./styles/app.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/app.css" />
+
+  <title>Movies App</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" ></script>
+
 </head>
 <body>
-    <h1>Movies App</h1>
-    <script src="./src/secrets.js"></script>
-    <script src="./src/main.js"></script>
+  <header id="header" class="header-container">
+    <span class="header-arrow inactive">&lt;</span>
+    <h1 class="header-title">Movies App</h1>
+    <h1 class="header-title header-title--categoryView inactive">Acción</h1>
+
+    <form id="searchForm" class="header-searchForm">
+      <input type="text" placeholder="Vengadores" />
+      <button id="searchBtn">🔍</button>
+    </form>
+  </header>
+
+  <section id="trendingPreview" class="trendingPreview-container">
+    <div class="trendingPreview-header">
+      <h2 class="trendingPreview-title">Tendencias</h2>
+      <button class="trendingPreview-btn">Próximamente</button>
+    </div>
+
+    <article class="trendingPreview-movieList">
+    </article>
+  </section>
+
+  <section id="categoriesPreview" class="categoriesPreview-container">
+    <h2 class="categoriesPreview-title">Categorías</h2>
+
+    <article class="categoriesPreview-list">
+    </article>
+  </section>
+
+  <section id="genericList" class="genericList-container inactive">
+  </section>
+
+  <section id="movieDetail" class="movieDetail-container inactive">
+    <h1 class="movieDetail-title"></h1>
+    <span class="movieDetail-score"></span>
+    <p class="movieDetail-description">
+    </p>
+
+    <article class="categories-list">
+    </article>
+
+    <article class="relatedMovies-container">
+      <h2 class="relatedMovies-title">Películas similares</h2>
+
+      <div class="relatedMovies-scrollContainer">
+       
+      </div>
+    </article>
+  </section>
+
+  <footer>Fsola Desings&copy;</footer>
+  
+    <script src="./src/nodes.js"></script>
+  <script src="./src/secrets.js"></script>
+  <script src="./src/main.js"></script>
+  <script src="./src/navigation.js"></script>
 </body>
 </html>
